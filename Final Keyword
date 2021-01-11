@@ -1,0 +1,118 @@
+
+
+// Final keyword can use with class, methods & variables
+
+
+
+class Smartphones{
+
+
+	final protected double IP ;
+	
+	
+	
+	/* 3 ways for initialization of final variable
+	
+	final double Ip = 198.162.11.05 ;
+	
+	{
+	
+	198.162.11.05
+	
+	}*/
+	
+	Smartphones(){
+	
+	IP = 198.162111;
+	
+	//IP = 12.5  u can allow initialization of final var is for only one time
+	
+	}
+	
+	
+
+	void useAndroid(){
+	
+		final int id = 111 ;
+	
+		System.out.println("Hi i am android os");
+	
+	}
+	
+	
+	final void useIos(){
+	
+	
+	System.out.println("hi i am  IOS for I phone");
+	
+	}
+	
+	
+
+
+
+}
+
+final class Apple{
+
+
+	void showOff(){
+	System.out.println("This is Iphone");
+	}
+
+}
+
+// class Android extends Apple{ }		cannot inherit from final Apple
+
+
+
+
+class RedMi extends Smartphones{
+
+
+	void useAndroid(){
+	
+	System.out.println("I used Android \t"+IP);
+	
+	
+	}
+	
+	
+	/*void useIos(){	// Final method can not override, overridden method is final 1 error
+
+	
+	
+	System.out.println("hi i am  IOS for RedMI");
+	
+	}*/
+
+
+
+}
+
+
+class Demo{
+
+
+
+	public static void main(String arg[]){
+	
+	
+		RedMi mi = new RedMi();
+		
+		mi.useAndroid();
+		
+		// mi.useIos(); but u can call final method using child class object 
+	
+	
+	
+	
+	}
+
+
+
+
+
+}
+
+
